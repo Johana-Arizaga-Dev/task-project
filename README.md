@@ -32,4 +32,23 @@ Cada usuario solo puede ver y administrar **sus propias tareas**.
 ---
 
 ## 📁 Estructura del proyecto
-
+task-project/
+│
+├── backend/
+│ ├── src/
+│ │ ├── controllers/
+│ │ ├── routes/
+│ │ ├── middlewares/
+│ │ ├── db.js
+│ │ └── server.js
+│ └── package.json
+│
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── services/
+│ │ ├── App.jsx
+│ │ └── main.jsx
+│ └── package.json
+│
+└── README.md
