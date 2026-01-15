@@ -36,8 +36,8 @@ task-project/
 │
 ├── backend/
 │ ├── src/
-│ │ ├── controllers/
-│ │ ├── routes/
+│ │ ├── controllers/│ 
+│ ├── routes/
 │ │ ├── middlewares/
 │ │ ├── db.js
 │ │ └── server.js
