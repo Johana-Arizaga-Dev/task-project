@@ -1,4 +1,4 @@
-# 📝 Task Manager – Proyecto Full Stack
+# Task Manager – Proyecto Full Stack
 
 Aplicación **Full Stack** para la gestión de tareas, desarrollada con  
 **Node.js + Express + PostgreSQL + React (Vite)**.
@@ -13,7 +13,7 @@ Cada usuario solo puede ver y administrar **sus propias tareas**.
 
 ---
 
-## 🚀 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 ### Backend
 - Node.js
@@ -31,39 +31,10 @@ Cada usuario solo puede ver y administrar **sus propias tareas**.
 
 ---
 
-## 📁 Estructura del proyecto
-task-project/
-├── backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   │   ├── authController.js
-│   │   │   └── tasksController.js
-│   │   ├── routes/
-│   │   │   ├── authRoutes.js
-│   │   │   └── tasksRoutes.js
-│   │   ├── middlewares/
-│   │   │   └── authMiddleware.js
-│   │   ├── db.js
-│   │   └── server.js
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── TaskList.jsx
-│   │   │   ├── TaskForm.jsx
-│   │   │   ├── Login.jsx
-│   │   │   └── Register.jsx
-│   │   ├── services/
-│   │   │   └── api.js
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   └── package.json
-└── README.md
-
-
-
 
 ## Configuracion de la Base de Datos
+
+
 -- Conectarse a PostgreSQL
 psql -U postgres
 
@@ -90,4 +61,47 @@ CREATE TABLE tasks (
     completed BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+--
+
+## 5. Ejecutar la aplicación
+
+
+Terminal 1 - Backend:
+
+bash
+cd backend
+npm run dev
+Terminal 2 - Frontend:
+
+bash
+cd frontend
+npm run dev
+La aplicación estará disponible en:
+
+Frontend: http://localhost:5173
+
+Backend API: http://localhost:5000
+
+## Endpoints de la API
+
+
+Autenticación
+POST /api/auth/register - Registrar nuevo usuario
+
+POST /api/auth/login - Iniciar sesión
+
+Tareas (requiere autenticación)
+GET /api/tasks - Obtener todas las tareas del usuario
+
+POST /api/tasks - Crear nueva tarea
+
+PUT /api/tasks/:id - Actualizar tarea
+
+DELETE /api/tasks/:id - Eliminar tarea
+
+
+
+
+
 
